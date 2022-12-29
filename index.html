@@ -7,44 +7,65 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./index.css">
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
 
   <main>
-    Order Summary
-
-    You can now listen to millions of songs, audiobooks, and podcasts on any
-    device anywhere you like!
-
-    Annual Plan
-    $59.99/year
-
-    Change
-
-    Proceed to Payment
-    Cancel Order
+    <h1 class="sr-only">Order Summary Component</h1>
+    <div class="container">
+      <div class="order-card">
+        <div>
+          <img class="hero-img" src="./images/illustration-hero.svg" alt="man listens to music" />
+        </div>
+        <div>
+          <h2 class="title font-red-hat m-top">Order Summary</h2>
+          <p class="m-top font-red-hat description">You can now listen to millions of songs, audiobooks, and podcasts on
+            any
+            device anywhere you like!</p>
+        </div>
+        <div class="plan-card m-top">
+          <div>
+            <img src="./images/icon-music.svg" alt />
+          </div>
+          <div class="selected-plan">
+            <span class="font-red-hat plan-name"> Annual Plan</span>
+            <span class="font-red-hat plan-price">$59.99/year</span>
+          </div>
+          <div>
+            <a class="font-red-hat change-plan">Change</a>
+          </div>
+        </div>
+        <div class="action-buttons m-top">
+          <button class="button primary-button font-red-hat">Proceed to Payment</button>
+          <button class="button secondary-button font-red-hat">Cancel Order</button>
+        </div>
+      </div>
+    </div>
   </main>
 
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/erandakarachchi">Eranda K.</a>.
+    </div>
+  </footer>
 </body>
 
 </html>
+
+<!-- Order Summary
+
+You can now listen to millions of songs, audiobooks, and podcasts on any
+device anywhere you like!
+
+
+
+Change
+
+Proceed to Payment
+Cancel Order -->

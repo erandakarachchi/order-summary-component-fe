@@ -1,3 +1,180 @@
-:root{
-    
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-pale-blue-a: hsla(225, 100%, 94%, 0.3);
+  --primary-bright-blue: hsl(245, 75%, 52%);
+  --primary-bright-blue-a: hsl(245, 75%, 52%, 0.7);
+  --normal-pale-blue: hsl(225, 100%, 98%);
+  --normal-desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --font-family: "Red Hat Display";
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* This will hide the content visually but available for screen readers */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.m-top {
+  margin-top: 2rem;
+}
+
+.font-red-hat {
+  font-family: var(--font-family);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--primary-pale-blue);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+.order-card {
+  width: 22rem;
+  background-color: var(--normal-pale-blue);
+  border-radius: 20px;
+}
+
+.hero-img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.title {
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0 2.5rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--normal-desaturated-blue);
+}
+
+.plan-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-pale-blue-a);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.plan-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.plan-price {
+  font-weight: 500;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--normal-desaturated-blue);
+}
+
+.change-plan {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  color: var(--primary-bright-blue);
+  cursor: pointer;
+}
+
+.change-plan:hover {
+  color: var(--primary-bright-blue-a);
+}
+
+.selected-plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.button {
+  height: 3rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border: 0px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.primary-button {
+  background-color: var(--primary-bright-blue);
+  color: var(--primary-pale-blue);
+  cursor: pointer;
+  box-shadow: 0px 1px 5px var(--normal-desaturated-blue);
+}
+
+.primary-button:hover {
+  background-color: var(--primary-bright-blue-a);
+}
+
+.secondary-button {
+  height: 2rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  background-color: var(--normal-pale-blue);
+  color: var(--normal-desaturated-blue);
+}
+
+.secondary-button:hover {
+  color: var(--dark-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: var(--primary-pale-blue);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-pale-blue);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+  }
+
+  .order-card {
+    width: 22rem;
+    background: var(--normal-pale-blue);
+    border-radius: 20px;
+  }
 }
